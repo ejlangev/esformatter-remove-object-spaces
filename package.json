@@ -1,0 +1,34 @@
+{
+  "name": "esformatter-remove-object-spaces",
+  "version": "0.0.1",
+  "description": "Remove spaces between braces of blank object literals",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ejlangev/esformatter-remove-object-spaces.git"
+  },
+  "keywords": [
+    "esformatter",
+    "esformatter-plugin",
+    "plugin",
+    "object",
+    "literal",
+    "collapse"
+  ],
+  "author": "Ethan Langevin <ejl6266@gmail.com> (http://ethanlangevin.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ejlangev/esformatter-remove-object-spaces/issues"
+  },
+  "homepage": "https://github.com/ejlangev/esformatter-remove-object-spaces",
+  "devDependencies": {
+    "esformatter": "^0.7.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "rocambole-token": "^1.2.1"
+  }
+}
