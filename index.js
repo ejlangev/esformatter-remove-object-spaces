@@ -1,8 +1,21 @@
-'use strict';
-
 var tk = require('rocambole-token');
+var rocambole = require('rocambole');
 
-exports.tokenBefore = tokenBefore;
+module.exports = {
+  transformAfter: function(ast) {
+    rocambole.recursive(ast, transform);
+  }
+};
+
+function transform(node) {
+  if (node.type != 'ObjectExpression') return;
+
+  var token = node.startToken;
+
+  if (isOpeningCurlyBracket(token) && shouldRemoveSpaces(token.next)) {
+    removeSpaces(token.next);
+  }
+}
 
 function tokenBefore(token) {
   if (isOpeningCurlyBracket(token) && shouldRemoveSpaces(token.next)) {
